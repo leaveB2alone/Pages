@@ -339,6 +339,10 @@ cursor: pointer;
     transform: rotate(-1deg);
 }
 
+#capa:hover{
+    cursor: pointer;
+}
+
 #capa3.active{
     width: 143px;
     margin-left: 0;
