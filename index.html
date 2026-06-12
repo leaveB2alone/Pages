@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/PNG/Celeste/Strawberry.ico" type="image/x-icon">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video" src="Videos/Celeste - Animated Wallpaper - Celeste Mountain.mp4">Celeste</video>
+    <div class="container">
+        <div class="top"> <!-------------------------------------------Topo------------------------------------------------------------------------->
+            <img src="Imagens/PNG/Celeste/Mountain.png" alt="Montanha">
+            <p id="B2" class="blink" onmouseenter="playSom1()" onclick="B2('Thats me :P')">B2</p>
+        </div>
+        <audio id="bg-music" loop>
+            <source src="Audio/Celeste-bg.wav" type="audio/wav">
+        </audio>
+        <audio id="hover-som1" src="Audio/CelesteSfx1.wav" preload="auto"></audio>
+        <audio id="hover-som2" src="Audio/CelesteSfx2.wav" preload="auto"></audio>
+        <audio id="hover-som3" src="Audio/CelesteSfx3.wav" preload="auto"></audio>
+        <audio id="hover-som4" src="Audio/CelesteSfx4.wav" preload="auto"></audio>
+        <audio id="hover-som5" src="Audio/CelesteSfx5.wav" preload="auto"></audio>
+        <audio id="hover-som6" src="Audio/CelesteSfx6.wav" preload="auto"></audio>
+        <audio id="hover-som7" src="Audio/CelesteSfx7.wav" preload="auto"></audio>
+        <div><!-------------------------------------------Menu-------------------------------------------------------------------------------------->
+            <div class="option" id="home" onmouseenter="playSom1()" onclick="alerta('You are already in home ;D')">
+                <img src="Imagens/PNG/Celeste/Pico.png" alt="Pico" class="image">
+                <p class="blink">Home</p>
+            </div> 
+            <!---->
+            <div class="option" id="about" onmouseenter="playSom1()" onclick="move(this)">
+                <img src="Imagens/PNG/Celeste/Gear.png" alt="Gear" class="image">
+                <p class="blink">About</p>
+            </div>
+            <!---->
+            <div class="option" id="socials" onmouseenter="playSom1()" onclick="move(this)">
+                <img src="Imagens/PNG/Celeste/Heart.png" alt="Heart" class="image">
+                <p class="blink">Socials</p>
+            </div>
+            <!---->
+            <div class="option" id="projects" onmouseenter="playSom1()" onclick="move(this)">
+                <img src="Imagens/PNG/Celeste/Arrow.png" alt="Arrow" class="image">
+                <p class="blink">Projects</p>
+            </div>
+        </div>
+    </div>
+    <div class="container2"><!-------------------------------------------Fora de tela--------------------------------------------------------------->
+        <div class="screen" id="screen-about"><!--------------------------------------------About-------------------------------------------------->
+            <div class="about" id="about-screen">
+                <img src="Imagens/PNG/Celeste/About.png" alt="about">
+                <p>This website serves as a hub for B2's social media and projects.<br><br>Make yourself at home while you're here.<br><br>&lt3</p>
+                <div id="about_back" onclick="out()"></div>
+            </div>
+        </div>
+        <div class="screen" id="screen-socials"><!-------------------------------------------Socials------------------------------------------------>
+            <div class="network" id="passportdex"> <!--Passportdex-->
+                <abbr title="Alyss (Pandora Hearts)"><img src="Imagens/PNG/Celeste/Socials/Passportdex.png" alt="Card" class="frente" id="card_passportdex" onmouseenter="playSom2()"></abbr>
+                <a href="https://passportdex.com/realb2" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_passportdex"></a>
+            </div>
+            <div class="network" id="steam"> <!--Steam-->
+                <abbr title="Shinobu (Monogatari Series)"><img src="Imagens/PNG/Celeste/Socials/Steam.png" alt="Card" class="frente" id="card_steam" onmouseenter="playSom2()"></abbr>
+                <a href="http://steamcommunity.com/id/lB2a" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_steam"></a>
+            </div>
+            <div class="network" id="soundcloud"> <!--Soundcloud-->
+                <abbr title="Kiriko (Overwatch)"><img src="Imagens/PNG/Celeste/Socials/Soundcloud.png" alt="Card" class="frente" id="card_soundcloud" onmouseenter="playSom2()"></abbr>
+                <a href="https://on.soundcloud.com/oTgFMdbc5YMnaQxjdI" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_soundcloud"></a>
+            </div>
+            <div class="network" id="pinteres"> <!--Pinterest-->
+                <abbr title="Juno (Overwatch)"><img src="Imagens/PNG/Celeste/Socials/Pinterest.png" alt="Card" class="frente" id="card_pinterest" onmouseenter="playSom2()"></abbr>
+                <a href="https://br.pinterest.com/dontB2close/" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_pinterest"></a>
+            </div>
+            <div class="network" id="myanimelist"> <!--Myanimelist-->
+                <abbr title="Kunagisa (Zaregoto)"><img src="Imagens/PNG/Celeste/Socials/Myanimelist.png" alt="Card" class="frente" id="card_myanimelist" onmouseenter="playSom2()"></abbr>
+                <a href="https://myanimelist.net/profile/leaveb2alone" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_myanimelist"></a>
+            </div>
+            <div class="network" id="backloggd"> <!--Backloggd-->
+                <abbr title="Freja (Overwatch)"><img src="Imagens/PNG/Celeste/Socials/Backloggd.png" alt="Card" class="frente" id="card_backloggd" onmouseenter="playSom2()"></abbr>
+                <a href="https://backloggd.com/u/lB2a" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_backloggd"></a>
+            </div>
+            <div class="network" id="retroachievements"> <!--Retroachievements-->
+                <abbr title="Asuka (Neon Genesis Evangelion)"><img src="Imagens/PNG/Celeste/Socials/Retroachievements.png" alt="Card" class="frente" id="card_retroachievements" onmouseenter="playSom2()"></abbr>
+                <a href="https://retroachievements.org/user/realB2" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_retroachievements"></a>
+            </div>
+            <div class="network" id="vndb"> <!--Vndb-->
+                <abbr title="Kurisu (Steins;Gate)"><img src="Imagens/PNG/Celeste/Socials/Vndb.png" alt="Card" class="frente" id="card_vndb" onmouseenter="playSom2()"></abbr>
+                <a href="https://vndb.org/u322432" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_vndb"></a>
+            </div>
+            <div class="network" id="github"> <!--Github-->
+                <abbr title="Maki (Danganronpa)"><img src="Imagens/PNG/Celeste/Socials/Github.png" alt="Card" class="frente" id="card_github" onmouseenter="playSom2()"></abbr>
+                <a href="https://github.com/leaveB2alone" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_github"></a>
+            </div>
+            <div class="network" id="x"> <!--X-->
+                <abbr title="Kallen (Code Geass)"><img src="Imagens/PNG/Celeste/Socials/X.png" alt="Card" class="frente" id="card_x"></abbr>
+                <a href="https://x.com/leaveb2alone" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_x"></a>
+            </div>
+            <div class="network" id="twitch"> <!--Twitch-->
+                <abbr title="Mahiru (Danganronpa)"><img src="Imagens/PNG/Celeste/Socials/Twitch.png" alt="Card" class="frente" id="card_twitch" onmouseenter="playSom2()"></abbr>
+                <a href="https://www.twitch.tv/leaveb2alone" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_twitch"></a>
+            </div>
+            <div class="network" id="yourgamerprofile"> <!--YourGamerProfile-->
+                <abbr title="Yukine (Noragami)"><img src="Imagens/PNG/Celeste/Socials/YourGamerProfile.png" alt="Card" class="frente" id="card_yourgamerprofile" onmouseenter="playSom2()"></abbr>
+                <a href="https://yourgamerprofile.com/leaveb2alone" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_yourgamerprofile"></a>
+            </div>
+            <div class="network" id="letterboxd"> <!--Letterboxd-->
+                <abbr title="I (Zaregoto)"><img src="Imagens/PNG/Celeste/Socials/Letterboxd.png" alt="Card" class="frente" id="card_letterboxd" onmouseenter="playSom2()"></abbr>
+                <a href="https://letterboxd.com/realB2/" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_letterboxd"></a>
+            </div>
+            <div class="network" id="serializd"> <!--Serializd-->
+                <abbr title="Echo (Pandora Hearts)"><img src="Imagens/PNG/Celeste/Socials/Serializd.png" alt="Card" class="frente" id="card_serializd" onmouseenter="playSom2()"></abbr>
+                <a href="https://www.serializd.com/user/lB2a/profile" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Content.png" alt="Content" class="atras" id="content_serializd"></a>
+            </div>
+            <div class="nada">
+                <div class="go-back" onmouseenter="playSom1()" onclick="out()">
+
+                    <p class="blink">Go Back</p>
+                </div>
+            </div>
+        </div>
+        <div class="screen" id="screen-projects"><!------------------------------------------Projects----------------------------------------------->
+            <div class="projects">
+                <img src="Imagens/PNG/Celeste/Diary.png" alt="capa" id="capa" class="front" onclick="movecapa(this)">
+                <img src="Imagens/PNG/Celeste/Diary-Open-Paper.png" alt="capa" id="capa2" class="back">
+                <img src="Imagens/PNG/Celeste/Diary-Open-Capa.png" alt="capa" id="capa3" class="back">
+                <div class="projects_option" class="middle">
+                    <abbr title="Musics that I listen"><a href="https://docs.google.com/document/d/1ep6Ax7Db3aezzPD2QxkE9PX0mfmrFIi05mDPZwn5_fc/edit?usp=sharing" target="_blank" rel="nofollow"><img src="Imagens/PNG/Celeste/Projects/Music Collection.png" alt="Music Collection" onmouseenter="playSom2()"></a></abbr>
+                </div>
+                <div class="projects-back" class="middle">
+                    <img src="Imagens/PNG/Celeste/Projects/Go Back.png" alt="Go Back" onclick="out()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resolucao-invalida">
+        <img src="Imagens/PNG/Celeste/Block.png" alt="block">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
