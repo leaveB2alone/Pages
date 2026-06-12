@@ -329,6 +329,7 @@ cursor: pointer;
 .projects-back img:hover{
     margin-top: -18px;
     margin-left: 20px;
+    cursor: pointer;
 
 }
 
