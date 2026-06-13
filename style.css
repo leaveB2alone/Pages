@@ -324,5 +324,3 @@ div.option p{
 .front  { z-index: 3; position: relative; }
 .middle { z-index: 2; position: relative; }
 .back   { z-index: 1; position: relative; top: -993px; }
-
-#resolucao-invalida{ display: none; }
