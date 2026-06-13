@@ -34,7 +34,7 @@ body{
 
 #app{ 
     width:1920px;
-    height:957px;
+    height:1080px;
     transform-origin: top left;
     transform: scale(var(--scale,1));
     display:grid;
@@ -123,7 +123,7 @@ div.option p{
 .container2 {
     grid-column: 2;
     position: relative;
-    height: 100vh;
+    height: 1080px;
 }
 
 /*--------------------------------------------------------------------About------------------------------------------------------------------------*/
@@ -324,5 +324,3 @@ div.option p{
 .front  { z-index: 3; position: relative; }
 .middle { z-index: 2; position: relative; }
 .back   { z-index: 1; position: relative; top: -993px; }
-
-#resolucao-invalida{ display: none; }
