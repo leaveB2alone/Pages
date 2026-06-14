@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Geometos;
-    src: url(Fonts/geometos-soft-extrabold.ttf) format('truetype');
+    src: url(../Fonts/geometos-soft-extrabold.ttf) format('truetype');
 }
 
 * {
