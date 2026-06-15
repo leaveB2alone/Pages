@@ -122,11 +122,38 @@ body{
 #screen-about{
     color: white;
     text-align: justify;
-    transform: translateY(-1000px);
     transition: 1s ease;
     font-size: 32pt;
+    transform: translateY(-1000px);
 }
 
 #screen-about.active{
-    transform: translate(0px);
+    transform: translateY(0px);
+}
+/*-----------------------------------------------------------About---------------------------------------------------------------------------------*/
+#screen-socials{
+    position: absolute;
+    top: 11%;
+    left: 2%;
+    transform: translateY(-1500px);
+    transition: 1s ease;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 800px;
+}
+#screen-socials.active{
+    transform: translateY(0px);
+    
+}
+
+.social{
+    width: 397px;
+    height: 245px;
+}
+
+.social:hover{
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.747));
+    cursor: pointer;
 }
