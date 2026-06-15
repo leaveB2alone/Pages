@@ -31,5 +31,5 @@ function moveback(option2){
 }
 
 function home(){
-    window.alert('You are already in home :D');
+    window.alert('You are already in home');
 }
