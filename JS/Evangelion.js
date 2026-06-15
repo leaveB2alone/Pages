@@ -19,7 +19,6 @@ function moveback(option2){
         option.classList.remove('show')
     }
     if (option2.id === 'about2'){
-        window.alert('You are already in about :D');
         document.querySelector('#screen-about').classList.add('active')
     }
 }
