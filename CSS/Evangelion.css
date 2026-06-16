@@ -14,6 +14,7 @@ body{
     background-color: black;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 1fr 100px;
@@ -34,46 +35,50 @@ body{
 .menu #logo{
     justify-self: center;
     align-self: center;
-    height: 347px;
-    width: 333px;
-    margin-top: 50px;
+    height: clamp(180px, 45vh, 347px);
+    width: clamp(180px, 24vw, 333px);
+    margin-top: clamp(25px, 6vh, 50px);
     animation: spin 10s linear infinite;
 }
 
 .options{
     align-self: center;
     display: grid;
-    grid-template-columns: 325px auto;
-    grid-template-rows: 150px 150px;
-    margin-top: -220px;
-    margin-left: -75px;
+    grid-template-columns: clamp(165px, 42vh, 325px) auto;
+    grid-template-rows: clamp(75px, 11vw, 150px) clamp(75px, 11vw, 150px);
+    margin-top: clamp(-220px, -29vh, -220px);
+    margin-left: clamp(-75px, -10vw, -75px);
 }
 
 .menu.hide{
+    z-index: 1;
     transform: translateY(-1000px);
 }
 
 #home{
-    margin-left: 80px;
-    margin-top: 50px;
+    z-index: 1;
+    margin-left: clamp(40px, 6vw, 80px);
+    margin-top: clamp(25px, 6.5vh, 50px);
 }
 
 #about{
     grid-row: 2;
-    margin-left: 128px;
-    margin-top: 35px;
+    z-index: 1;
+    margin-left: clamp(64px, 9vw, 128px);
+    margin-top: clamp(17px, 4vh, 35px);
 }
 
 #socials{
     grid-row: 2;
     grid-column: 2;
-    margin-top: 40px;
-    margin-left: 60px;
+    z-index: 1;
+    margin-top: clamp(20px, 5vh, 40px);
+    margin-left: clamp(30px, 4vw, 60px);
 }
 
 #projects{
-    margin-left: 180px;
-    margin-top: 25px;
+    margin-left: clamp(90px, 13vw, 180px);
+    margin-top: clamp(12px, 3vh, 25px);
 }
 
 .glow:hover{
@@ -98,7 +103,7 @@ body{
     display: flex;
     margin-top: -5px;
     margin-left: 10px;
-    gap: 15px;
+    gap: clamp(7px, 1vw, 15px);
     transition: 1s ease;
     transform: translateY(-100px);
 }
@@ -109,7 +114,7 @@ body{
 
 .options-back p{
     color: white;
-    font-size: 32pt;
+    font-size: clamp(16pt, 2.5vw, 32pt);
 }
 
 .screen{
@@ -121,9 +126,11 @@ body{
 /*-----------------------------------------------------------About---------------------------------------------------------------------------------*/
 #screen-about{
     color: white;
-    text-align: justify;
+    text-align: center;
     transition: 1s ease;
-    font-size: 32pt;
+    font-size: clamp(16pt, 2.5vw, 32pt);
+    width: 90vw;
+    padding: 0 5vw;
     transform: translateY(-1000px);
 }
 
@@ -140,20 +147,82 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 15px;
-    height: 800px;
+    gap: clamp(7px, 1vw, 15px);
+    height: clamp(400px, 82vh, 800px);
+    width: 96vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
+
+#screen-socials::-webkit-scrollbar {
+    height: clamp(3.5px, 1vh, 7.5px);
+}
+
+#screen-socials::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#screen-socials::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.164);
+    border-radius: 3px;
+}
+
 #screen-socials.active{
     transform: translateY(0px);
     
 }
 
 .social{
-    width: 397px;
-    height: 245px;
+    width: clamp(180px, 28vw, 397px);
+    height: clamp(110px, 17vw, 245px);
 }
 
 .social:hover{
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.747));
     cursor: pointer;
+}
+/*--------------------------------------------------------Projects---------------------------------------------------------------------------------*/
+#screen-projects{
+    position: absolute;
+    top: 7.5%;
+    left: 2%;
+    transform: translateY(-1500px);
+    text-align: justify;
+    transition: 1s ease;
+    font-size: clamp(28pt, 6vw, 78pt);
+    color: white;
+}
+
+#screen-projects p{
+    text-align: left;
+    transform: scaleX(1);
+    line-height: clamp(50px, 9vh, 100px);   
+}
+
+#screen-projects p#text3{
+    margin-left: clamp(50px, 8.5vw, 150px);
+    transform: scaleX(1.6);
+}
+
+#screen-projects p#text4{
+    transform: scaleY(1.2);
+    font-size: clamp(18pt, 3.5vw, 48pt);
+    margin-top: 10px;
+}
+
+.projects p{
+    position: absolute;
+    top: 80vh;
+    left: clamp(100px, 70vw, 250%);
+    min-width: clamp(200px, 30vw, 425px);
+    font-size: clamp(20pt, 3.5vw, 48pt);
+}
+
+.projects a{
+    color: white;
+}
+
+#screen-projects.active{
+    transform: translateY(0px);
 }

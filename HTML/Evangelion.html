@@ -8,58 +8,73 @@
     <title>Soul</title>
 </head>
 <body>
+    <audio id="bg-music" loop>
+                <source src="../Audio/Evangelion-bg.wav" type="audio/wav">
+    </audio>
+    <audio id="hover-som1" src="../Audio/EvangelionSfx1.wav" preload="auto"></audio>
+    <audio id="hover-som2" src="../Audio/EvangelionSfx2.wav" preload="auto"></audio>
     <div class="menu"> <!--------------------------------------------Menu--------------------------------------------------------------------------->
         <div id="logo">
             <abbr title="Neon Genesis Evangelion"><img src="../Imagens/PNG/Evangelion/NERV.png" alt="NERV"></abbr>
         </div>
         <div class="options">
-            <img src="../Imagens/PNG/Evangelion/Home.png" alt="Home" id="home" class="glow" onclick="home(this)">
-            <img src="../Imagens/PNG/Evangelion/About.png" alt="About" id="about" class="glow" onclick="move(this)">
-            <img src="../Imagens/PNG/Evangelion/Socials.png" alt="Socials" id="socials" class="glow" onclick="move(this)">
-            <img src="../Imagens/PNG/Evangelion/Projects.png" alt="Projects" id="projects" class="glow" onclick="move(this)">
+            <img src="../Imagens/PNG/Evangelion/Home.png" alt="Home" id="home" class="glow" onmouseenter="playSom1()" onclick="home(this)">
+            <img src="../Imagens/PNG/Evangelion/About.png" alt="About" id="about" class="glow" onmouseenter="playSom1()" onclick="move(this)">
+            <img src="../Imagens/PNG/Evangelion/Socials.png" alt="Socials" id="socials" class="glow" onmouseenter="playSom1()" onclick="move(this)">
+            <img src="../Imagens/PNG/Evangelion/Projects.png" alt="Projects" id="projects" class="glow" onmouseenter="playSom1()" onclick="move(this)">
         </div>
     </div>
     <div class="options-back"> <!----------------------------------------------------------Options-------------------------------------------------->
-        <p class="glow text" id="home2" onclick="moveback(this)">Home</p>
-        <p class="glow text" id="about2" onclick="moveback(this)">About</p>
-        <p class="glow text" id="socials2" onclick="moveback(this)">Socials</p>
-        <p class="glow text" id="projects2" onclick="moveback(this)">Projects</p>
+        <p class="glow text" id="home2" onmouseenter="playSom1()" onclick="moveback(this)">Home</p>
+        <p class="glow text" id="about2" onmouseenter="playSom1()" onclick="moveback(this)">About</p>
+        <p class="glow text" id="socials2" onmouseenter="playSom1()" onclick="moveback(this)">Socials</p>
+        <p class="glow text" id="projects2" onmouseenter="playSom1()" onclick="moveback(this)">Projects</p>
     </div>
     <div class="screen">
         <div class="screen" id="screen-about"><!-----------------------------------------About------------------------------------------------------>
-            <p class="text">This website serves as a hub for B2's social media and projects. Make yourself at home while you're here.</p>
+            <p class="text">This website serves as a hub for B2's social media and projects. Make yourself at home while you're here. <br>&lt3</p>
         </div>
-            <div class="screen" id="screen-socials">
-                <abbr title="Alyss (Pandora Hearts)"><a href="https://passportdex.com/realb2" target="_blank" rel="nofollow"><img class="social" id="passportdex" src="../Imagens/PNG/Evangelion/Socials/Passportdex.png" alt="Passportdex"></a></abbr>
+        <div class="screen" id="screen-socials"><!---------------------------------------Social----------------------------------------------------->
+            <abbr title="Alyss (Pandora Hearts)"><a href="https://passportdex.com/realb2" target="_blank" rel="nofollow"><img class="social" id="passportdex" src="../Imagens/PNG/Evangelion/Socials/Passportdex.png" alt="Passportdex" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Shinobu (Monogatari Series)"><a href="http://steamcommunity.com/id/lB2a" target="_blank" rel="nofollow"><img class="social" id="steam" src="../Imagens/PNG/Evangelion/Socials/Steam.png" alt="Steam"></a></abbr>
+            <abbr title="Shinobu (Monogatari Series)"><a href="http://steamcommunity.com/id/lB2a" target="_blank" rel="nofollow"><img class="social" id="steam" src="../Imagens/PNG/Evangelion/Socials/Steam.png" alt="Steam" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Kiriko (Overwatch)"><a href="https://on.soundcloud.com/oTgFMdbc5YMnaQxjdI" target="_blank" rel="nofollow"><img class="social" id="soundcloud" src="../Imagens/PNG/Evangelion/Socials/Soundcloud.png" alt="Soundcloud"></a></abbr>
+            <abbr title="Kiriko (Overwatch)"><a href="https://on.soundcloud.com/oTgFMdbc5YMnaQxjdI" target="_blank" rel="nofollow"><img class="social" id="soundcloud" src="../Imagens/PNG/Evangelion/Socials/Soundcloud.png" alt="Soundcloud" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Juno (Overwatch)"><a href="https://br.pinterest.com/dontB2close/" target="_blank" rel="nofollow"><img class="social" id="pinterest" src="../Imagens/PNG/Evangelion/Socials/Pinterest.png" alt="Pinterest"></a></abbr>
+            <abbr title="Juno (Overwatch)"><a href="https://br.pinterest.com/dontB2close/" target="_blank" rel="nofollow"><img class="social" id="pinterest" src="../Imagens/PNG/Evangelion/Socials/Pinterest.png" alt="Pinterest" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Kunagisa (Zaregoto)"><a href="https://myanimelist.net/profile/leaveb2alone" target="_blank" rel="nofollow"><img class="social" id="myanimelist" src="../Imagens/PNG/Evangelion/Socials/MyAnimeList.png " alt="MyAnimeList"></a></abbr>
+            <abbr title="Kunagisa (Zaregoto)"><a href="https://myanimelist.net/profile/leaveb2alone" target="_blank" rel="nofollow"><img class="social" id="myanimelist" src="../Imagens/PNG/Evangelion/Socials/MyAnimeList.png " alt="MyAnimeList" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Freja (Overwatch)"><a href="https://backloggd.com/u/lB2a" target="_blank" rel="nofollow"><img class="social" id="backloggd" src="../Imagens/PNG/Evangelion/Socials/Backloggd.png " alt="Backloggd"></a></abbr>
+            <abbr title="Freja (Overwatch)"><a href="https://backloggd.com/u/lB2a" target="_blank" rel="nofollow"><img class="social" id="backloggd" src="../Imagens/PNG/Evangelion/Socials/Backloggd.png " alt="Backloggd" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Asuka (Neon Genesis Evangelion)"><a href="https://retroachievements.org/user/realB2" target="_blank" rel="nofollow"><img class="social" id="retroachievements" src="../Imagens/PNG/Evangelion/Socials/RetroAchievements.png " alt="Retroachievements"></a></abbr>
+            <abbr title="Asuka (Neon Genesis Evangelion)"><a href="https://retroachievements.org/user/realB2" target="_blank" rel="nofollow"><img class="social" id="retroachievements" src="../Imagens/PNG/Evangelion/Socials/RetroAchievements.png " alt="Retroachievements" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Kurisu (Steins;Gate)"><a href="https://vndb.org/u322432" target="_blank" rel="nofollow"><img class="social" id="vndb" src="../Imagens/PNG/Evangelion/Socials/Vndb.png " alt="Vndb"></a></abbr> 
+            <abbr title="Kurisu (Steins;Gate)"><a href="https://vndb.org/u322432" target="_blank" rel="nofollow"><img class="social" id="vndb" src="../Imagens/PNG/Evangelion/Socials/Vndb.png " alt="Vndb" onmouseenter="playSom1()"></a></abbr> 
 
-                <abbr title="Maki (Danganronpa)"><a href="https://github.com/leaveB2alone" target="_blank" rel="nofollow"><img class="social" id="github" src="../Imagens/PNG/Evangelion/Socials/Github.png " alt="Github"></a></abbr>
+            <abbr title="Maki (Danganronpa)"><a href="https://github.com/leaveB2alone" target="_blank" rel="nofollow"><img class="social" id="github" src="../Imagens/PNG/Evangelion/Socials/Github.png " alt="Github" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Kallen (Code Geass)"><a href="https://x.com/leaveb2alone" target="_blank" rel="nofollow"><img class="social" id="x" src="../Imagens/PNG/Evangelion/Socials/X.png " alt="X"></a></abbr>
+            <abbr title="Kallen (Code Geass)"><a href="https://x.com/leaveb2alone" target="_blank" rel="nofollow"><img class="social" id="x" src="../Imagens/PNG/Evangelion/Socials/X.png " alt="X" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Mahiru (Danganronpa)"><a href="https://www.twitch.tv/leaveb2alone" target="_blank" rel="nofollow"><img class="social" id="twitch" src="../Imagens/PNG/Evangelion/Socials/Twitch.png " alt="Twitch"></a></abbr>
-                
-                <abbr title="Yukine (Noragami)"><a href="https://yourgamerprofile.com/leaveb2alone" target="_blank" rel="nofollow"><img class="social" id="yourgamerprofile" src="../Imagens/PNG/Evangelion/Socials/YourGamerProfile.png " alt="YourGamerProfile"></a></abbr>
+            <abbr title="Mahiru (Danganronpa)"><a href="https://www.twitch.tv/leaveb2alone" target="_blank" rel="nofollow"><img class="social" id="twitch" src="../Imagens/PNG/Evangelion/Socials/Twitch.png " alt="Twitch" onmouseenter="playSom1()"></a></abbr>
+            
+            <abbr title="Yukine (Noragami)"><a href="https://yourgamerprofile.com/leaveb2alone" target="_blank" rel="nofollow"><img class="social" id="yourgamerprofile" src="../Imagens/PNG/Evangelion/Socials/YourGamerProfile.png " alt="YourGamerProfile" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="I (Zaregoto)"><a href="https://letterboxd.com/realB2/" target="_blank" rel="nofollow"><img class="social" id="letterboxd" src="../Imagens/PNG/Evangelion/Socials/Letterboxd.png " alt="Letterboxd"></a></abbr>
+            <abbr title="I (Zaregoto)"><a href="https://letterboxd.com/realB2/" target="_blank" rel="nofollow"><img class="social" id="letterboxd" src="../Imagens/PNG/Evangelion/Socials/Letterboxd.png " alt="Letterboxd" onmouseenter="playSom1()"></a></abbr>
 
-                <abbr title="Echo (Pandora Hearts)"><a href="https://www.serializd.com/user/lB2a/profile" target="_blank" rel="nofollow"><img class="social" id="serializd" src="../Imagens/PNG/Evangelion/Socials/Serializd.png " alt="Serializd"></a></abbr>
-                
+            <abbr title="Echo (Pandora Hearts)"><a href="https://www.serializd.com/user/lB2a/profile" target="_blank" rel="nofollow"><img class="social" id="serializd" src="../Imagens/PNG/Evangelion/Socials/Serializd.png " alt="Serializd" onmouseenter="playSom1()"></a></abbr>                
+        </div>
+        <div class="screen" id="screen-projects"><!-------------------------------------Projects---------------------------------------------------->
+            <div id="title">
+                <p class="text" id="text1">NEON</p>
+                <p class="text" id="text2">GENESIS</p>
+                <p class="text" id="text3">EVANGELION</p>
+                <p class="text" id="text4">EPISODE: ?</p>
+            </div>
+            <div class="projects">
+                <abbr title="Musics that I listen"><a href="https://docs.google.com/document/d/1ep6Ax7Db3aezzPD2QxkE9PX0mfmrFIi05mDPZwn5_fc/edit?usp=sharing" target="_blank" rel="nofollow"><p class="text project glow" id="project1" onmouseenter="playSom1()">Music Collection</p></a></abbr>
             </div>
         </div>
+    </div>
     <script src="../JS/Evangelion.js"></script>
 </body>
 </html>
