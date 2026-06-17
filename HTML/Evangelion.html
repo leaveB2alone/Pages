@@ -8,6 +8,7 @@
     <title>Soul</title>
 </head>
 <body>
+    <video autoplay muted loop playsinline id="bg-video" src="../Videos/plexus blur.mp4">Evangelion</video>
     <audio id="bg-music" loop>
                 <source src="../Audio/Evangelion-bg.wav" type="audio/wav">
     </audio>
@@ -15,7 +16,7 @@
     <audio id="hover-som2" src="../Audio/EvangelionSfx2.wav" preload="auto"></audio>
     <div class="menu"> <!--------------------------------------------Menu--------------------------------------------------------------------------->
         <div id="logo">
-            <abbr title="Neon Genesis Evangelion"><img src="../Imagens/PNG/Evangelion/NERV.png" alt="NERV"></abbr>
+            <abbr title="Neon Genesis Evangelion"><img src="../Imagens/PNG/Evangelion/NERV.png" alt="NERV" class="glow" id="nerv" onmouseenter="playSom1()" onclick="theme()"></abbr>
         </div>
         <div class="options">
             <img src="../Imagens/PNG/Evangelion/Home.png" alt="Home" id="home" class="glow" onmouseenter="playSom1()" onclick="home(this)">

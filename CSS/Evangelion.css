@@ -10,14 +10,28 @@
     padding: 0;
 }
 
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 body{
-    background-color: black;
+
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 1fr 100px;
+    transition: .5s;
+}
+body.bright{
+    background-color: white;
 }
 
 .text{
@@ -86,6 +100,11 @@ body{
     cursor: pointer;
 }
 
+.bright .glow:hover{
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    cursor: pointer;
+}
+
 
 @keyframes spin{
     0% {
@@ -96,7 +115,7 @@ body{
         transform: rotate(360deg);
     }
 }
-/*--------------------------------------------------------------------Opções------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------Opções------------------------------------------------------------------------*/
 .options-back{
     grid-column: 1;
     grid-row: 1;
@@ -117,6 +136,10 @@ body{
     font-size: clamp(16pt, 2.5vw, 32pt);
 }
 
+.bright .options-back p{
+    color: black;  
+}
+
 .screen{
     grid-column: 1 / 4;
     grid-row: 2;
@@ -132,6 +155,10 @@ body{
     width: 90vw;
     padding: 0 5vw;
     transform: translateY(-1000px);
+}
+
+.bright #screen-about{
+    color: black;
 }
 
 #screen-about.active{
@@ -182,6 +209,11 @@ body{
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.747));
     cursor: pointer;
 }
+
+.bright .social:hover{
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.747));
+    cursor: pointer;
+}
 /*--------------------------------------------------------Projects---------------------------------------------------------------------------------*/
 #screen-projects{
     position: absolute;
@@ -192,6 +224,10 @@ body{
     transition: 1s ease;
     font-size: clamp(28pt, 6vw, 78pt);
     color: white;
+}
+
+.bright #screen-projects{
+    color: black;
 }
 
 #screen-projects p{
@@ -221,6 +257,10 @@ body{
 
 .projects a{
     color: white;
+}
+
+.bright .projects a{
+    color: black;
 }
 
 #screen-projects.active{

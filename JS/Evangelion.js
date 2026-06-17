@@ -68,3 +68,29 @@ document.querySelector('#screen-socials').addEventListener('wheel', function(e) 
         behavior: 'smooth'
     });
 }, { passive: false });
+
+function theme(){
+    playSom2()
+    document.body.classList.toggle('bright')
+    const home = document.querySelector('#home')
+    const about = document.querySelector('#about')
+    const socials = document.querySelector('#socials')
+    const projects = document.querySelector('#projects')
+    const logo = document.querySelector('#nerv')
+    const video = document.querySelector('video')
+    if (document.querySelector('body').classList.contains('bright')){
+        home.src = '../Imagens/PNG/Evangelion/Home2.png'
+        about.src = '../Imagens/PNG/Evangelion/About2.png'
+        socials.src = '../Imagens/PNG/Evangelion/Socials2.png'
+        projects.src = '../Imagens/PNG/Evangelion/Projects2.png'
+        logo.src = '../Imagens/PNG/Evangelion/NERV2.png'
+        video.src = '../Videos/plexus blur2.mp4'
+    }else{ 
+        home.src = '../Imagens/PNG/Evangelion/Home.png'
+        about.src = '../Imagens/PNG/Evangelion/About.png'
+        socials.src = '../Imagens/PNG/Evangelion/Socials.png'
+        projects.src = '../Imagens/PNG/Evangelion/Projects.png'
+        logo.src = '../Imagens/PNG/Evangelion/NERV.png'
+        video.src = '../Videos/plexus blur.mp4'
+    }
+}
