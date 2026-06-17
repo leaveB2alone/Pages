@@ -195,6 +195,10 @@ body.bright{
     border-radius: 3px;
 }
 
+.bright #screen-socials::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.164);
+}
+
 #screen-socials.active{
     transform: translateY(0px);
     
