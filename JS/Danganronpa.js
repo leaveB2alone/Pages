@@ -1,4 +1,3 @@
-
 // --------------------------------------------------------------------Variaveis---------------------------------------------------------------------
 const home = document.querySelector('#home')
 const about = document.querySelector('#about')
@@ -45,6 +44,7 @@ projects.addEventListener('mouseleave', () =>{
 
 // --------------------------------------------------------Abas--------------------------------------------------------------------------------------
 function move(option){
+    playSom2()
     const opt = document.querySelectorAll('.menu')
     const screen = document.querySelectorAll('.screen')
     screen.forEach((s) => s.classList.remove('active'))
@@ -58,6 +58,7 @@ function move(option){
 }
 
  async function goBack(option2){
+    playSom3()
     if (option2.id === 'socials-go-back'){
         await removeClass('socials')
         screenSocial.classList.remove('hide')
@@ -77,6 +78,7 @@ function removeClass(value){
     });
 }
 
+//-----------------------------------------------------------Troca de imagens------------------------------------------------------------------------
 iconSocial.forEach(icon =>{
     icon.addEventListener('mouseenter', () =>{
         if (icon.id === 'passportdex'){
@@ -95,6 +97,18 @@ iconSocial.forEach(icon =>{
             icon.src = '../Imagens/PNG/Danganronpa/Social/IconBackloggdLight.png'
             imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelBackloggd.png'
         }
+        if (icon.id === 'myanimelist'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconMyAnimeListLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelMyAnimeList.png'
+        }
+        if (icon.id === 'soundcloud'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconSoundcloudLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelSoundcloud.png'
+        }
+        if (icon.id === 'pinterest'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconPinterestLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelPinterest.png'
+        }
     })
     icon.addEventListener('mouseleave', () =>{
         if (icon.id === 'passportdex'){
@@ -109,7 +123,72 @@ iconSocial.forEach(icon =>{
         if (icon.id === 'backloggd'){
             icon.src = '../Imagens/PNG/Danganronpa/Social/IconBackloggd.png'
         }
+        if (icon.id === 'myanimelist'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconMyAnimeList.png'
+        }
+        if (icon.id === 'soundcloud'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconSoundcloud.png'
+        }
+        if (icon.id === 'pinterest'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconPinterest.png'
+        }
         imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelDefault.png'
     })
     console.log(iconSocial)
 })
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+        e.preventDefault();
+    }
+});
+
+//-------------------------------------------------------Sons----------------------------------------------------------------------------------------
+const audioContext = new AudioContext();
+
+async function loadAudio(path) {
+    const response = await fetch(path);
+    const arrayBuffer = await response.arrayBuffer();
+    return await audioContext.decodeAudioData(arrayBuffer);
+}
+
+async function playMusic() {
+    const intro = await loadAudio("../Audio/Danganronpa-bg-intro.wav");
+    const loop = await loadAudio("../Audio/Danganronpa-bg-loop.wav");
+    const introSource = audioContext.createBufferSource();
+    introSource.buffer = intro;
+    introSource.connect(audioContext.destination);
+    introSource.start();
+    introSource.onended = () => {
+        const loopSource = audioContext.createBufferSource();
+        loopSource.buffer = loop;
+        loopSource.loop = true;
+        loopSource.connect(audioContext.destination);
+        loopSource.start();
+    };
+}
+document.addEventListener('click', () => {
+    if (audioContext.state === 'suspended') {
+        audioContext.resume();
+    }
+    playMusic();
+}, {once: true});
+
+const sfx1 = document.querySelector('#sfx1')
+const sfx2 = document.querySelector('#sfx2')
+const sfx3 = document.querySelector('#sfx3')
+
+function playSom1() {
+    sfx1.currentTime = 0;
+    sfx1.play();
+}
+
+function playSom2() {
+    sfx2.currentTime = 0;
+    sfx2.play();
+}
+
+function playSom3() {
+    sfx3.currentTime = 0;
+    sfx3.play();
+}

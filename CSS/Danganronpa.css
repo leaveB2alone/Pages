@@ -6,6 +6,7 @@
 }
 
 body{
+    position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -43,10 +44,8 @@ video {
 }
 /*---------------------------------------------------------------Menu------------------------------------------------------------------------------*/
 .menu{
-    position: absolute;
-    grid-column: 2  ;
-    top: 3.40%;
-    left: 9%;
+    position: relative;
+    margin-left: 160px;
     width: 400px;
     height: 700px;
     pointer-events: auto;
@@ -57,35 +56,39 @@ video {
 }
 
 #home{
-    transform: scaleY(0.90);
+    position: absolute;
+    top: 3%;
+    left: -6.5%;
+    transform: scale(0.91, 0.80);
 }
 
 #about{
     position: absolute;
-    top: 13.75%;
-    left: 33%;
-    transform: scaleY(0.90);
+    top: 15.3%;
+    left: 24%;
+    transform: scale(0.91, 0.80);
 
 }
 
 #socials{
     position: absolute;
-
-    top: 31%;
-    left: -9%;
-    transform: scaleY(0.90);
+    top: 31.5%;
+    left: -15%;
+    transform: scale(0.91, 0.80);
 }
 
 #projects{
     position: absolute;
-    top: 39.5%;
-    left: 45%;
-    transform: scaleY(0.90);
+    top: 38.8%;
+    left: 36%;
+    transform: scale(0.91, 0.80);
     
+}
+.screen{
+    grid-column: 1/-1;
 }
 /*------------------------------------------------------------Socials------------------------------------------------------------------------------*/
 #screen-socials{
-    grid-column: 1/-1;
     position: relative;
     width: 1739px;
     height: 745px;
@@ -102,43 +105,67 @@ video {
 
 }
 
+#panel{
+    position: absolute;
+    transform: scale(0.90);
+    top: -19.5%;
+    left: -5%;
+}
+
 #panelsocial{
     position: absolute;
     grid-column: 4;
-    top: 15.9%;
-    left: 69.65%;
+    transform: scale(0.90);
+    top: -2.5%;
+    left: 61.15%;
 }
 
 .socialicon{
     position: absolute;
+    transform: scale(0.90);
 }
 
 #passportdex{
-    top: 27.5%;
-    left: 3.25%;
+    top: 10%;
+    left: 2.5%;
 }
 
 #steam{
-    top: 35%;
-    left: 13.3%;
+    top: 17.5%;
+    left: 11.5%;
 }
 
 #github{
-    top: 22.5%;
-    left: 21.5%;
+    top: 5.75%;
+    left: 18.75%;
 }
 
 #backloggd{
-    top: 33%;
-    left: 31.75%;
+    top: 15.5%;
+    left: 28%;
+}
+
+#myanimelist{
+    top: 0.25%;
+    left: 35.5%;
+}
+
+#soundcloud{
+    top: 13%;
+    left: 44.75%;
+}
+
+#pinterest{
+    top: 1%;
+    left: 52.5%;
 }
 
 #socials-go-back{
     position: absolute;
-    top: 116.5%;
+    top: 92%;
     left: 3%;
-    width: 1335px;
-    height: 75px;
+    width: 1195px;
+    height: 65px;
     border-radius: 50px;
 }
 

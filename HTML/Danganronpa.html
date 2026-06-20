@@ -8,11 +8,14 @@
 </head>
 <body>
     <video autoplay muted loop playsinline id="bg-video" src="../Videos/Danganronpa.mp4">Celeste</video>
+    <audio src="../Audio/DanganronpaSfx1.wav" id="sfx1"></audio>
+    <audio src="../Audio/DanganronpaSfx2.wav" id="sfx2"></audio>
+    <audio src="../Audio/DanganronpaSfx3.wav" id="sfx3"></audio>
     <div class="menu">
-        <img src="../Imagens/PNG/Danganronpa/Plate 1.png" alt="" class="opcao glow" id="home" onclick="move(this)">
-        <img src="../Imagens/PNG/Danganronpa/Plate 2.png" alt="" class="opcao glow" id="about">
-        <img src="../Imagens/PNG/Danganronpa/Plate 3.png" alt="" class="opcao glow" id="socials" onclick="move(this)">
-        <img src="../Imagens/PNG/Danganronpa/Plate 4.png" alt="" class="opcao glow" id="projects">
+        <img src="../Imagens/PNG/Danganronpa/Plate 1.png" alt="" class="opcao glow" id="home" onmouseenter="playSom1()" onclick="move(this)">
+        <img src="../Imagens/PNG/Danganronpa/Plate 2.png" alt="" class="opcao glow" id="about" onmouseenter="playSom1()">
+        <img src="../Imagens/PNG/Danganronpa/Plate 3.png" alt="" class="opcao glow" id="socials" onmouseenter="playSom1()" onclick="move(this)">
+        <img src="../Imagens/PNG/Danganronpa/Plate 4.png" alt="" class="opcao glow" id="projects" onmouseenter="playSom1()">
     </div>
     <div class="screen">
         <div class="screen" id="screen-socials">
@@ -27,6 +30,17 @@
             
             <a href="https://backloggd.com/u/lB2a" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconBackloggd.png" alt="Backloggd" id="backloggd"></a>
 
+            <a href="https://myanimelist.net/profile/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconMyAnimeList.png" alt="MyAnimeList" id="myanimelist"></a>
+
+            <a href="https://on.soundcloud.com/oTgFMdbc5YMnaQxjdI" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconSoundcloud.png" alt="Soundcloud" id="soundcloud"></a>
+
+            <a href="https://br.pinterest.com/dontB2close/" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconPinterest.png" alt="Pinterest" id="pinterest"></a>
+
+            <div id="other-socials">
+                <div class="screen" id="screen-socials2">
+                    <a href="https://retroachievements.org/user/realB2" target="_blank" rel="nofollow"><img src="../Imagens/PNG/Danganronpa/Social/IconRetroAchivements.png" alt="Retroachievements"></a>
+                </div>
+            </div>
             <div id="socials-go-back" onclick="goBack(this)"></div>
         </div>
     </div>
