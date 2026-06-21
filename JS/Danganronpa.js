@@ -109,6 +109,38 @@ iconSocial.forEach(icon =>{
             icon.src = '../Imagens/PNG/Danganronpa/Social/IconPinterestLight.png'
             imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelPinterest.png'
         }
+        if (icon.id === 'retroachievements'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconRetroAchievementsLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelRetroachievements.png'
+        }
+        if (icon.id === 'vndb'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconVndbLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelVndb.png'
+        }
+        if (icon.id === 'x'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconXLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelX.png'
+        }
+        if (icon.id === 'twitch'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconTwitchLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelTwitch.png'
+        }
+        if (icon.id === 'yourgamerprofile'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconYourGamerProfileLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelYourGamerProfile.png'
+        }
+        if (icon.id === 'letterboxd'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconLetterboxdLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelLetterboxd.png'
+        }
+        if (icon.id === 'serializd'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconSerializdLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelSerializd.png'
+        }
+        if (icon.id === 'osu'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconOsuLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelOsu.png'
+        }
     })
     icon.addEventListener('mouseleave', () =>{
         if (icon.id === 'passportdex'){
@@ -131,6 +163,30 @@ iconSocial.forEach(icon =>{
         }
         if (icon.id === 'pinterest'){
             icon.src = '../Imagens/PNG/Danganronpa/Social/IconPinterest.png'
+        }
+        if (icon.id === 'retroachievements'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconRetroAchievements.png'
+        }
+        if (icon.id === 'vndb'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconVndb.png'
+        }
+        if (icon.id === 'x'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconX.png'
+        }
+        if (icon.id === 'twitch'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconTwitch.png'
+        }
+        if (icon.id === 'yourgamerprofile'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconYourGamerProfile.png'
+        }
+        if (icon.id === 'letterboxd'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconLetterboxd.png'
+        }
+        if (icon.id === 'serializd'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconSerializd.png'
+        }
+        if (icon.id === 'osu'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconOsu.png'
         }
         imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelDefault.png'
     })

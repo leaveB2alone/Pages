@@ -113,7 +113,7 @@ video {
     left: 69.65%;
 }
 
-.socialicon{
+#main-socials .socialicon{
     position: absolute;
 }
 
@@ -151,6 +151,44 @@ video {
     top: 3.5%;
     left: 58.9%;
 }
+
+#other-socials{
+    position: absolute;
+    top: 54.5%;
+    margin-left: 6.5%;
+    width: 1100px;
+    height: 335px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    gap: 7.5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#other-socials::-webkit-scrollbar{
+    margin-right: -10px;
+    width: 10px;
+}
+
+#other-socials::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#other-socials::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.164);
+    border-radius: 3px;
+}
+
+#other-socials a {
+    flex: 0 0 auto;
+}
+
+#other-socials img {
+    display: block;
+    width: 150px;
+    height: auto;
+}   
 
 #socials-go-back{
     position: absolute;
