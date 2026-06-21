@@ -20,13 +20,6 @@ video {
     z-index: -1;
 }
 
-/*
- * ESTRATÉGIA: o layout foi desenhado para 1920×957.
- * Escalamos o <body> inteiro via CSS scale(), mantendo
- * todos os valores originais em px intocados.
- * O scale é calculado por JS (ver script-responsive.js).
- */
-
  html {
     overflow: hidden;
 }

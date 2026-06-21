@@ -55,33 +55,29 @@ video {
     pointer-events: none;
 }
 
-#home{
+.menu img{
     position: absolute;
-    top: 3%;
-    left: -6.5%;
-    transform: scale(0.91, 0.80);
+    transform: scaleY(0.90);
+}
+
+#home{
+    top: 4.25%;
+    left: 3.25%;
 }
 
 #about{
-    position: absolute;
-    top: 15.3%;
-    left: 24%;
-    transform: scale(0.91, 0.80);
-
+    top: 18.5%;
+    left: 36.5%;
 }
 
 #socials{
-    position: absolute;
-    top: 31.5%;
-    left: -15%;
-    transform: scale(0.91, 0.80);
+    top: 35.5%;
+    left: -6%;
 }
 
 #projects{
-    position: absolute;
-    top: 38.8%;
-    left: 36%;
-    transform: scale(0.91, 0.80);
+    top: 44%;
+    left: 48%;
     
 }
 .screen{
@@ -106,66 +102,62 @@ video {
 }
 
 #panel{
-    position: absolute;
-    transform: scale(0.90);
-    top: -19.5%;
-    left: -5%;
+    position: absolute; 
+    top: -13.25%;
 }
 
 #panelsocial{
     position: absolute;
     grid-column: 4;
-    transform: scale(0.90);
-    top: -2.5%;
-    left: 61.15%;
+    top: 2.5%;
+    left: 69.65%;
 }
 
 .socialicon{
     position: absolute;
-    transform: scale(0.90);
 }
 
 #passportdex{
-    top: 10%;
-    left: 2.5%;
+    top: 14.25%;
+    left: 3.25%;
 }
 
 #steam{
-    top: 17.5%;
-    left: 11.5%;
+    top: 22%;
+    left: 13.3%;
 }
 
 #github{
-    top: 5.75%;
-    left: 18.75%;
+    top: 9%;
+    left: 21.5%;
 }
 
 #backloggd{
-    top: 15.5%;
-    left: 28%;
+    top: 20%;
+    left: 31.75%;
 }
 
 #myanimelist{
-    top: 0.25%;
-    left: 35.5%;
+    top: 3%;
+    left: 40%;
 }
 
 #soundcloud{
-    top: 13%;
-    left: 44.75%;
+    top: 16.75%;
+    left: 50.25%;
 }
 
 #pinterest{
-    top: 1%;
-    left: 52.5%;
+    top: 3.5%;
+    left: 58.9%;
 }
 
 #socials-go-back{
     position: absolute;
-    top: 92%;
+    top: 103%;
     left: 3%;
-    width: 1195px;
-    height: 65px;
+    width: 1335px;
+    height: 77px;
     border-radius: 50px;
 }
 

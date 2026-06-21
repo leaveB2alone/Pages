@@ -8,7 +8,7 @@
     const scale  = Math.min(scaleX, scaleY);
     document.documentElement.style.setProperty('--scale', scale);
     document.getElementById('app').style.setProperty('--scale', scale);
-    window.scrollTo(0, 0); // <- reseta scroll
+    window.scrollTo(0, 0);
 }
 
     applyScale();
