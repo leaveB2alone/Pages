@@ -1,6 +1,7 @@
 const temas = [
     'Celeste',
     'Evangelion',
+    'Danganronpa',
 ];
 
 const aleatorio = Math.floor(Math.random() * temas.length);
