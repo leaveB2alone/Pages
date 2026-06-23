@@ -11,54 +11,71 @@
     <audio src="../Audio/DanganronpaSfx1.wav" id="sfx1"></audio>
     <audio src="../Audio/DanganronpaSfx2.wav" id="sfx2"></audio>
     <audio src="../Audio/DanganronpaSfx3.wav" id="sfx3"></audio>
-    <div class="menu">
-        <img src="../Imagens/PNG/Danganronpa/Plate 1.png" alt="" class="opcao glow" id="home" onmouseenter="playSom1()" onclick="move(this)">
-        <img src="../Imagens/PNG/Danganronpa/Plate 2.png" alt="" class="opcao glow" id="about" onmouseenter="playSom1()">
-        <img src="../Imagens/PNG/Danganronpa/Plate 3.png" alt="" class="opcao glow" id="socials" onmouseenter="playSom1()" onclick="move(this)">
-        <img src="../Imagens/PNG/Danganronpa/Plate 4.png" alt="" class="opcao glow" id="projects" onmouseenter="playSom1()">
-    </div>
-    <div class="screen">
-        <div class="screen" id="screen-socials">
-            <img src="../Imagens/PNG/Danganronpa/Panel.png" alt="Panel" id="panel">
-            <img src="../Imagens/PNG/Danganronpa/Social/PanelDefault.png" alt="Panel" id="panelsocial">
 
-            <div id="main-socials">
-                <a href="https://passportdex.com/realb2" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconPassportdex.png" alt="Passportdex" id="passportdex"></a>
-
-                <a href="http://steamcommunity.com/id/lB2a" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconSteam.png" alt="Steam" id="steam"></a>
-
-                <a href="https://github.com/leaveB2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconGithub.png" alt="Github" id="github"></a>
-                
-                <a href="https://backloggd.com/u/lB2a" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconBackloggd.png" alt="Backloggd" id="backloggd"></a>
-
-                <a href="https://myanimelist.net/profile/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconMyAnimeList.png" alt="MyAnimeList" id="myanimelist"></a>
-
-                <a href="https://on.soundcloud.com/oTgFMdbc5YMnaQxjdI" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconSoundcloud.png" alt="Soundcloud" id="soundcloud"></a>
-                
-                <a href="https://br.pinterest.com/dontB2close/" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconPinterest.png" alt="Pinterest" id="pinterest"></a>
+    <div id="app">
+        <div class="menu">
+            <img src="../Imagens/PNG/Danganronpa/Plate 1.png" alt="" class="opcao glow" id="home" onmouseenter="playSom1()" onclick="move(this)">
+            <img src="../Imagens/PNG/Danganronpa/Plate 2.png" alt="" class="opcao glow" id="about" onmouseenter="playSom1()" onclick="move(this)">
+            <img src="../Imagens/PNG/Danganronpa/Plate 3.png" alt="" class="opcao glow" id="socials" onmouseenter="playSom1()" onclick="move(this)">
+            <img src="../Imagens/PNG/Danganronpa/Plate 4.png" alt="" class="opcao glow" id="projects" onmouseenter="playSom1()" onclick="move(this)">
+        </div>
+        <div class="screen">
+            <div class="screen" id="screen-about">
+                <img src="../Imagens/PNG/Danganronpa/About Plate.png" alt="About" id="about">
+                <div id="about-go-back" onmouseenter="playSom1()" onclick="goBack(this)"></div>
             </div>
+            <div class="screen" id="screen-socials">
+                <img src="../Imagens/PNG/Danganronpa/Panel.png" alt="Panel" id="panel">
+                <img src="../Imagens/PNG/Danganronpa/Social/PanelDefault.png" alt="Panel" id="panelsocial">
 
-            <div id="other-socials">
-                <a href="https://retroachievements.org/user/realB2" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconRetroAchievements.png" alt="Retroachievements" id="retroachievements"></a>
+                <div id="main-socials">
+                    <a href="https://passportdex.com/realb2" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconPassportdex.png" alt="Passportdex" id="passportdex" onmouseenter="playSom1()"></a>
 
-                <a href="https://vndb.org/u322432" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconVndb.png" alt="Vndb" id="vndb"></a>
+                    <a href="http://steamcommunity.com/id/lB2a" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconSteam.png" alt="Steam" id="steam" onmouseenter="playSom1()"></a>
 
-                <a href="https://x.com/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconX.png" alt="X" id="x"></a>
+                    <a href="https://github.com/leaveB2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconGithub.png" alt="Github" id="github" onmouseenter="playSom1()"></a>
+                    
+                    <a href="https://backloggd.com/u/lB2a" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconBackloggd.png" alt="Backloggd" id="backloggd" onmouseenter="playSom1()"></a>
 
-                <a href="https://www.twitch.tv/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconTwitch.png" alt="Twitch" id="twitch"></a>
+                    <a href="https://myanimelist.net/profile/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconMyAnimeList.png" alt="MyAnimeList" id="myanimelist" onmouseenter="playSom1()" onmouseenter="playSom1()"></a>
 
-                <a href="https://yourgamerprofile.com/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconYourGamerProfile.png" alt="YourGamerProfile" id="yourgamerprofile"></a>
+                    <a href="https://on.soundcloud.com/oTgFMdbc5YMnaQxjdI" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconSoundcloud.png" alt="Soundcloud" id="soundcloud" onmouseenter="playSom1()"></a>
+                    
+                    <a href="https://br.pinterest.com/dontB2close/" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconPinterest.png" alt="Pinterest" id="pinterest" onmouseenter="playSom1()"></a>
+                </div>
 
-                <a href="https://letterboxd.com/realB2/" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconLetterboxd.png" alt="Letterboxd" id="letterboxd"></a>
+                <div id="other-socials">
+                    <a href="https://retroachievements.org/user/realB2" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconRetroAchievements.png" alt="Retroachievements" id="retroachievements" onmouseenter="playSom1()"></a>
 
-                <a href="https://www.serializd.com/user/lB2a/profile" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconSerializd.png" alt="Serializd" id="serializd"></a>
+                    <a href="https://vndb.org/u322432" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconVndb.png" alt="Vndb" id="vndb" onmouseenter="playSom1()"></a>
 
-                <a href="https://osu.ppy.sh/users/38672567" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconOsu.png" alt="Osu" id="osu"></a>
+                    <a href="https://x.com/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconX.png" alt="X" id="x" onmouseenter="playSom1()"></a>
 
+                    <a href="https://www.twitch.tv/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconTwitch.png" alt="Twitch" id="twitch" onmouseenter="playSom1()"></a>
+
+                    <a href="https://yourgamerprofile.com/leaveb2alone" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconYourGamerProfile.png" alt="YourGamerProfile" id="yourgamerprofile" onmouseenter="playSom1()"></a>
+
+                    <a href="https://letterboxd.com/realB2/" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconLetterboxd.png" alt="Letterboxd" id="letterboxd" onmouseenter="playSom1()"></a>
+
+                    <a href="https://www.serializd.com/user/lB2a/profile" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconSerializd.png" alt="Serializd" id="serializd" onmouseenter="playSom1()"></a>
+
+                    <a href="https://osu.ppy.sh/users/38672567" target="_blank" rel="nofollow"><img class="socialicon glow" src="../Imagens/PNG/Danganronpa/Social/IconOsu.png" alt="Osu" id="osu" onmouseenter="playSom1()"></a>
+
+                </div>
+                <div id="socials-go-back" onmouseenter="playSom1()" onclick="goBack(this)"></div>
             </div>
-            <div id="socials-go-back" onclick="goBack(this)"></div>
+            <div class="screen" id="screen-projects">
+                <img src="../Imagens/PNG/Danganronpa/Projects Plate.png" alt="Projects" id="panelprojects">
+                <img src="../Imagens/PNG/Danganronpa/Projects/Default.png" alt="Panelshow" id="showproject">
+                    <abbr title="Musics that I listen"><a href="https://docs.google.com/document/d/1ep6Ax7Db3aezzPD2QxkE9PX0mfmrFIi05mDPZwn5_fc/edit?usp=sharing" target="_blank" rel="nofollow" onmouseenter="playSom1()"><p class="texto projetos" id="musiccolection">Music Colection</p></a></abbr>
+                <div id="projects-go-back" onmouseenter="playSom1()" onclick="goBack(this)">
+                    <p class="texto">Close</p>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="../JS/Danganronpa.js"></script>
+    <script src="../JS/Danganronpa-responsive.js"></script>
 </body>
 </html>

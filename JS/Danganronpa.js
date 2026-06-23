@@ -7,6 +7,10 @@ const menu = document.querySelector('.menu')
 const screenSocial = document.querySelector('#screen-socials')
 const imageSocial = document.querySelector('#panelsocial')
 const iconSocial = document.querySelectorAll('.socialicon')
+const screenAbout = document.querySelector('#screen-about')
+const screenProjects = document.querySelector('#screen-projects') 
+const projetos = document.querySelectorAll('.projetos')
+const panelProjects = document.querySelector('#showproject')
 
 // --------------------------------------------------------Placa glow--------------------------------------------------------------------------------
 
@@ -55,6 +59,14 @@ function move(option){
         menu.classList.add('hide')
         screenSocial.classList.add('active')
     }
+    if (option.id === 'about'){
+        menu.classList.add('hide')
+        screenAbout.classList.add('active')
+    }
+    if (option.id === 'projects'){
+        menu.classList.add('hide')
+        screenProjects.classList.add('active')
+    }
 }
 
  async function goBack(option2){
@@ -62,6 +74,14 @@ function move(option){
     if (option2.id === 'socials-go-back'){
         await removeClass('socials')
         screenSocial.classList.remove('hide')
+    }
+    if (option2.id === 'about-go-back'){
+        await removeClass('about')
+        screenAbout.classList.remove('hide')
+    }
+    if (option2.id === 'projects-go-back'){
+        await removeClass('projects')
+        screenProjects.classList.remove('hide')
     }
     menu.classList.remove('hide')
 }
@@ -72,6 +92,20 @@ function removeClass(value){
             screenSocial.classList.remove('active')
             screenSocial.classList.add('hide')
             screenSocial.addEventListener('animationend', () =>{
+                resolve();
+            }, {once: true});
+        }
+        if (value === 'about'){
+            screenAbout.classList.remove('active')
+            screenAbout.classList.add('hide')
+            screenAbout.addEventListener('animationend', () =>{
+                resolve();
+            }, {once: true});
+        }
+        if (value === 'projects'){
+            screenProjects.classList.remove('active')
+            screenProjects.classList.add('hide')
+            screenProjects.addEventListener('animationend', () =>{
                 resolve();
             }, {once: true});
         }
@@ -198,6 +232,18 @@ document.addEventListener('keydown', (e) => {
         e.preventDefault();
     }
 });
+
+projetos.forEach(projeto =>{
+    projeto.addEventListener('mouseenter', () =>{
+        if (projeto.id === 'musiccolection'){
+            panelProjects.src = '../Imagens/PNG/Danganronpa/Projects/Music Collection.png'
+        }
+    })
+    
+    projeto.addEventListener('mouseleave', () =>{
+        panelProjects.src = '../Imagens/PNG/Danganronpa/Projects/Default.png'
+    })
+})
 
 //-------------------------------------------------------Sons----------------------------------------------------------------------------------------
 const audioContext = new AudioContext();

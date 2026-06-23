@@ -1,18 +1,27 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Antario';
+    src: url(../Fonts/antario-bold.otf) format('opentype');
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
+html{
+    background-color: black;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 body{
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 50px 60px 1100px 68px 1fr;
-    grid-template-rows: 100px 325px 80px 335px 28px 75px 1fr;
 }
 
 body::-webkit-scrollbar {
@@ -20,13 +29,34 @@ body::-webkit-scrollbar {
     height: 0;
 }
 
-
 video {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 957px;
+    transform-origin: top left;
+    transform: scale(var(--scale, 1));
     object-fit: fill;
     z-index: -1;
+}
+
+/*------------------------------------------------------------App (scale wrapper)-------------------------------------------------------------------*/
+#app{
+    width: 1920px;
+    height: 1080px;
+    transform-origin: top left;
+    transform: scale(var(--scale, 1));
+    position: relative;
+    display: grid;
+    grid-template-columns: 50px 60px 1100px 68px 1fr;
+    grid-template-rows: 100px 325px 80px 335px 28px 75px 1fr;
+}
+
+.texto{
+    font-family: 'Antario';
+    color: rgb(94, 94, 94);
+    font-size: 44pt;
 }
 
 .glow:hover{
@@ -42,6 +72,7 @@ video {
         filter: drop-shadow(0 0 25px rgb(255, 220, 24));
     }
 }
+
 /*---------------------------------------------------------------Menu------------------------------------------------------------------------------*/
 .menu{
     position: relative;
@@ -83,11 +114,44 @@ video {
 .screen{
     grid-column: 1/-1;
 }
+
+/*------------------------------------------------------------About--------------------------------------------------------------------------------*/
+#screen-about{
+    position: relative;
+    width: 1632px;
+    height: 204px;
+    margin-left: 5%;
+    margin-top: 32%;
+    transform-origin: center 1000%;
+    transform: rotate(180deg);
+}
+
+#about-go-back{
+    position: absolute;
+    top: 65%;
+    left: 89.5%;
+    width: 130px;
+    height: 50px;
+}
+
+#about-go-back:hover{
+    cursor: pointer;
+}
+
+#screen-about.active{
+    animation: enter 1.5s linear forwards;
+}
+
+#screen-about.hide{
+    animation: leave 1.5s linear forwards;
+}
+
 /*------------------------------------------------------------Socials------------------------------------------------------------------------------*/
 #screen-socials{
     position: relative;
     width: 1739px;
     height: 745px;
+    margin-top: -42.5%;
     transform-origin: center 200%;
     transform: rotate(180deg);
 }
@@ -98,7 +162,6 @@ video {
 
 #screen-socials.hide{
     animation: leave 1s linear forwards;
-
 }
 
 #panel{
@@ -212,7 +275,70 @@ video {
         transform: rotate(360deg);
     }
 }
+/*------------------------------------------------------------Projects-----------------------------------------------------------------------------*/
+#screen-projects{
+    position: absolute;
+    width: 1771px;
+    height: 906px;
+    top: 7%;
+    left: 3%;
+    transform-origin: center 200%;
+    transform: rotate(180deg);
+}
 
+#screen-projects.active{
+    animation: enter 1s linear forwards;
+}
+
+#screen-projects.hide{
+    animation: leave 1s linear forwards;
+}
+
+#showproject{
+    position: absolute;
+    top: 6%;
+    left: 46.5%;
+}
+
+#musiccolection{
+    position: absolute;
+    width: 733px;
+    height: 66px;
+    top: 7.75%;
+    left: 1.5%;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#musiccolection:hover{
+    background-image: linear-gradient(to right, #60e894 60%, #ffffff00);
+    color: black;
+    cursor: pointer;
+}
+
+#projects-go-back{
+    position: absolute;
+    background-image: linear-gradient(to right, #ffffff00, #ffffff00);;
+    height: 75px;
+    width: 753px;
+    top: 69%;
+    left: 2.27%;
+}
+
+#projects-go-back:hover{
+    background-image: linear-gradient(to right, #60e894 60%, #ffffff00);
+}
+
+#projects-go-back p{
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+#projects-go-back p:hover{
+    color: black;
+    cursor: pointer;
+}
+/*------------------------------------------------------------Animation----------------------------------------------------------------------------*/
 @keyframes leave{
     0%, 50%{
         transform: rotate(360deg);
