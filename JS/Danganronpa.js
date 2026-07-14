@@ -171,6 +171,14 @@ iconSocial.forEach(icon =>{
             icon.src = '../Imagens/PNG/Danganronpa/Social/IconSerializdLight.png'
             imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelSerializd.png'
         }
+        if (icon.id === 'aoty'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconAOTYLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelAOTY.png'
+        }
+        if (icon.id === 'lastfm'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconLastfmLight.png'
+            imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelLastfm.png'
+        }
         if (icon.id === 'osu'){
             icon.src = '../Imagens/PNG/Danganronpa/Social/IconOsuLight.png'
             imageSocial.src = '../Imagens/PNG/Danganronpa/Social/PanelOsu.png'
@@ -218,6 +226,12 @@ iconSocial.forEach(icon =>{
         }
         if (icon.id === 'serializd'){
             icon.src = '../Imagens/PNG/Danganronpa/Social/IconSerializd.png'
+        }
+        if (icon.id === 'aoty'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconAOTY.png'
+        }
+        if (icon.id === 'lastfm'){
+            icon.src = '../Imagens/PNG/Danganronpa/Social/IconLastfm.png'
         }
         if (icon.id === 'osu'){
             icon.src = '../Imagens/PNG/Danganronpa/Social/IconOsu.png'
